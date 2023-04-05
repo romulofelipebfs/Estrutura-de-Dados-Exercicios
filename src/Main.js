@@ -65,6 +65,9 @@ while(!p.isEmpty()){
 console.log(p2)
 */
 
+/*
+
+QUESTÃO 4
 
 let p = new Pilha();
 let pAux = new Pilha();
@@ -106,4 +109,61 @@ while((!pAux.isEmpty() && pAux.top()!==base)){
 }
 p.push(topo)
 console.log(p)
+*/
+
+//QUESTÃO 5
+/*
+let p = new Pilha()
+
+let numero = 59
+let resto
+while(numero!==0){
+    resto = numero % 2
+    p.push(resto)
+    numero = Math.floor(numero/2)
+}
+let pConvertida = new Pilha()
+while(!p.isEmpty()){
+    pConvertida.push(p.top())
+    p.pop()
+}
+
+console.log(pConvertida)
+*/
+
+// QUESTÃO 6
+
+let caracteres = ['[', '(', ')', ']']
+let palavra = "[ ( ) [ ( ) ] ] ( )"
+let palavraFinal
+let p = new Pilha()
+
+
+
+for(let i = 0;i<palavra.length;i++){
+    if(palavra[i] == '[' || palavra[i] == '('){
+        p.push(palavra[i])
+    }else if(palavra[i] == ')' || palavra[i] == ']'){
+        palavraFinal = palavra[i]
+       // if(palavraFinal!==p.top()||p.isEmpty()){
+            if((palavra[i] === ')' && p.top()=== '(')||(palavra[i] === ']' && p.top()=== '[')){
+                p.pop()
+            }
+            
+            //console.log("CORRETO")
+       // }
+
+    }
+
+}
+
+if(!p.isEmpty()){
+    console.log("má formação")
+}else{
+    console.log("boa formação")
+
+}
+
+
+
 //export default Pilha;

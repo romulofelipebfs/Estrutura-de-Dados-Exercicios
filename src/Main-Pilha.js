@@ -144,7 +144,7 @@ for(let i = 0;i<palavra.length;i++){
     if(palavra[i] == '[' || palavra[i] == '('){
         p.push(palavra[i])
     }else if(palavra[i] == ')' || palavra[i] == ']'){
-        palavraFinal = palavra[i]
+        //palavraFinal = palavra[i]
        // if(palavraFinal!==p.top()||p.isEmpty()){
             if((palavra[i] === ')' && p.top()=== '(')||(palavra[i] === ']' && p.top()=== '[')){
                 p.pop()
